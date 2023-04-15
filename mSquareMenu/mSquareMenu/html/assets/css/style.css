@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* UI PERSONAL */
+
+#container {
+    position: absolute;
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 130px;
+    width: 520px;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#container ul {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#container ul li {
+    text-align: center;
+    flex-direction: column;
+    margin: 0 10px;
+}
+
+#container ul li i {
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    padding: 10px 18px;
+    transition: transform .2s ease, background .2s ease, border .2s ease;
+    z-index: 1;
+}
+
+#container ul li i {
+    font-size: 2.4rem;
+    color: #ffffff;
+}
+
+#container ul li h1 {
+    font-size: 0.9rem;
+    color: #ffffff;
+    opacity: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: opacity .2s ease;
+    z-index: -10;
+}
+
+#container ul li:hover i {
+    background: #3dbbff;
+    border: 1px solid #3dbbff;
+    transform: scale(1.2);
+    transform: translateY(-10px);
+}
+
+#container ul li:hover h1 {
+    opacity: 1;
+}
+
+/* WALLET PAGE */
+
+#walletPage {
+    position: absolute;
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 750px;
+    width: 1500px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#walletPage .money-player {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;   
+    margin: 85px 0; 
+}
+
+#walletPage .money-player .green {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 150px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform .3s ease;
+}
+
+#walletPage .money-player .green:hover {
+    transform: scale(1.05);
+}
+
+#walletPage .money-player .black {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 150px;
+    width: 400px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+}
+
+#walletPage .money-player .black:hover {
+    transform: scale(1.05);
+}
+
+#walletPage .money-player .green i {
+    font-size: 4.5rem;
+    color: #188d00b6;
+}
+
+#walletPage .money-player .black i {
+    font-size: 4.5rem;
+    color: #880000b6;
+}
+
+
+
+#walletPage .money-player .money h3 {
+    font-size: 1.6rem;
+    color: #ffffffb6;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+#walletPage .keyboard-money {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#walletPage .keyboard-money h3 {
+    font-size: 2rem;
+    color: #ffffffb6;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 15px;
+}
+
+#walletPage .keyboard-money input {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    color: #ffffffb6;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 20px 20px 60px;
+    outline: none;
+}
+
+#walletPage .keyboard-money i {
+    color: #ffffff;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 38%; 
+    padding-top: 50px;
+}
+
+#walletPage .btn-money {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;   
+    margin: 20px 0; 
+}
+
+#walletPage .btn-money .action {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 80px;
+    width: 250px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
+    transition: transform .3s ease;
+}
+
+#walletPage .btn-money .action h3 {
+    font-size: 1.6rem;
+    color: #ffffffb6;
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+
+}
+
+#walletPage .btn-money .action i {
+    font-size: 1.6rem;
+    color: #ffffffb6;
+}
+
+#walletPage .btn-money .action:hover {
+    transform: scale(1.1);
+}   
+
+
+/* Inventory */
+
+#inventoryPage {
+    position: absolute;
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 750px;
+    width: 645px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#inventoryPage .container-inventory {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 40px;
+}
+
+#inventoryPage .playerInventoryPage {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 570px;
+    width: 565px;
+    border-radius: 10px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: #181818b6;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #3dbbff;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#inventoryPage .playerInventoryPage .slot {
+    float: left;
+    width: 90px;
+    height: 90px;
+    background-color:  #2e2e2eb6;
+    margin: 23px;
+    border-radius: 5px;
+    position: relative;
+}
+
+#inventoryPage .playerInventoryPage .slot:hover {
+    opacity: 0.8;
+}
+
+.item {
+    width: 75px;
+    height: 75px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.item .item-icon {
+    position: relative;
+    height: 75%;
+    width: 75%;
+    transform: translate(35%, 35%);
+    margin: 3px 0 0 0;
+}
+
+.item-count {
+    position: absolute;
+    top: 0;
+    text-align: right;
+    width: 88px;
+    height: 20px;
+    font-size: 0.7vw;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    margin: 3px 5px 0 0;
+}
+
+.item-name {
+    font-size: 0.8vw;
+    color: #ffffff;
+    font-weight: 300;
+    font-family: 'Poppins', sans-serif;
+    margin: 80px 0 0 0;
+    text-align: center;
+}
+
+.controls {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.controldiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 60px;
+}
+
+.control {
+    width: 200px;
+    height: 40px;
+    background-color: #181818b6;
+    margin: 10px;
+    box-shadow: 0 0 45px -10px #000000;
+    border-radius: 10px;
+}
+
+.control.disabled {
+    background-color: rgba(17, 5, 17, 0.1);
+}
+
+.control h3 {
+    font-size: 1.3rem;
+    color: #ffffffb6;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px;
+}
+
+.control input {
+    background: none;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 1.2rem;
+    width: 85px;
+    padding: 5px 0 0 0;
+}
+
+.hoverControl {
+    background-color: rgb(10, 2, 10);
+}
+
+/* Identity */
+
+#identityPage {
+    position: absolute;
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 750px;
+    width: 1500px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#identityPage .content-id {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 40px;
+}
+
+#identityPage .gauche {
+    height: 670px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+#identityPage .droite {
+    height: 670px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+#identityPage .boite-infos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 25px 0;
+}
+
+#identityPage .boite-infos h3 {
+    font-size: 1.5rem;
+    color: #3dbbff;
+    margin-bottom: 12px;
+}
+
+#identityPage .boite-infos span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background: #181818b6;
+    padding: 15px 40px;
+    border-radius: 10px;
+}
+
+#identityPage .boite-infos span i {
+    font-size: 1.1rem;
+    color: #ffffffc0;
+}
+
+#identityPage .boite-infos span h4 {
+    font-size: 1.1rem;
+    color: #ccccccb6;
+    margin: 10px;
+}
+
+#identityPage .content-boite-droite {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;  
+    margin-top: 250px;
+}
+
+#identityPage .boite-action-i {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    background: #181818b6;
+    padding: 15px 40px;
+    border-radius: 10px;
+    margin: 25px;
+    transition: transform .3s ease;
+}
+
+#identityPage .boite-action-i:hover {
+    transform: scale(1.1);
+}
+
+#identityPage .boite-action-i i {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    color: #3dbbff;
+}
+
+#identityPage .boite-action-i h4 {
+    font-size: 1.2rem;
+}
+
+#billingPage {
+    position: absolute;
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 750px;
+    width: 645px;
+    top: 47%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    font-weight: 500;
+    cursor: pointer;
+    overflow-y: scroll;
+}
+
+#billingPage .listbills {
+    background: #181818b6;
+    box-shadow: 0 0 45px -10px #000000;
+    height: 70px;
+    width: 590px;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+#billingPage .listbills .buttonbills {
+    background: #3dbbff;
+    border-radius: 10px;
+    padding: 10px;
+    transition: transform .2s ease;
+}
+
+#billingPage .listbills .buttonbills:hover {
+    transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}

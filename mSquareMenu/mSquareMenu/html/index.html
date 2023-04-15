@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mPersonal</title>
+        <!-- ===== Fontawesome Link ===== -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+        <!-- ===== CSS ===== -->
+        <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+        <link rel="stylesheet" href="assets/css/reset.css" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+        <!-- ===== JS ===== -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+</head>
+    <body>
+        <div id="container">
+            <ul>
+                <li>
+                    <i id="closed" class="fa-solid fa-xmark"></i>
+                    <h1>Fermer</h1>
+                </li>
+                <li>
+                    <i id="inventory" class="fa-solid fa-box"></i>
+                    <h1>Inventaire</h1>
+                </li>
+                <li>
+                    <i id="wallet" class="fa-solid fa-wallet"></i>
+                    <h1>Portefeuille</h1>
+                </li>
+                <li>
+                    <i id="billing" class="fa-solid fa-file-invoice"></i>
+                    <h1>Facture</h1>
+                </li>
+                <li>
+                    <i id="identity" class="fa-solid fa-id-card"></i>
+                    <h1>Identité</h1>
+                </li>
+            </ul>
+        </div>
+        <div id="walletPage">
+            <div class="money-player">
+                <div class="money">
+                    <div class="green">
+                        <i class="fa-solid fa-money-bill-1-wave"></i>
+                        <h3><span id="money"></span></h3>
+                    </div>
+                </div>
+                <div class="money">
+                    <div class="black">
+                        <i class="fa-solid fa-money-bill-1-wave"></i>
+                        <h3><span id="blackMoney"></span></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="keyboard-money">
+                <h3>Quantité</h3>
+                <input id="count" type="text" onkeypress="return isNumberKey(event)" placeholder="Entrez la quantité ici">
+                <i class="fa-solid fa-circle-dollar-to-slot"></i>
+            </div>
+            <div class="btn-money">
+                <div class="action" id="give">
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                    <h3>Donner</h3>
+                </div>
+                <div class="action" id="drop">
+                    <i class="fa-solid fa-trash-can"></i>
+                    <h3>Jeter</h3>
+                </div>
+            </div>
+        </div>
+        <div id="inventoryPage">
+            <div class="container-inventory">
+                <div class="playerInventoryPage">
+                    <div id="playerInventory">
+                        
+                    </div>
+                </div>
+                <div class="controls">
+                    <div class="infodiv">
+                        
+                    </div> 
+                    <div class="controldiv">
+                        <div class="control">
+                            <input id="countItem" type="text" onkeypress="return isNumberKey(event)" placeholder="Quantité">
+                        </div>
+                        <div class="control" id="used">
+                            <h3>Utiliser</h3>
+                        </div>
+                        <!-- <div class="control" id="utils">
+                            <h3>Raccourci</h3>
+                        </div> -->
+                        <div class="control" id="give_player">
+                            <h3>Donner</h3>
+                        </div>
+                        <div class="control" id="drop_player">
+                            <h3>Jetter</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="identityPage">
+            <div class="content-id">
+                <div class="gauche">
+                    <div class="info-p">
+                        <div class="boite-infos">
+                            <h3>Prénom</h3>
+                            <span>
+                                <i class="fa-solid fa-user"></i>
+                                <h4 id="firstname"></h4>
+                            </span>
+                        </div>
+                        <div class="boite-infos">
+                            <h3>Nom</h3>
+                            <span>
+                                <i class="fa-solid fa-user"></i>
+                                <h4 id="lastname"></h4>
+                            </span>
+                        </div>
+                        <div class="boite-infos">
+                            <h3>Date de Naissance</h3>
+                            <span>
+                                <i class="fa-solid fa-cake-candles"></i>
+                                <h4 id="dateofbirth"></h4>
+                            </span>
+                        </div>
+                        <div class="boite-infos">
+                            <h3>Métier</h3>
+                            <span>
+                                <i class="fa-solid fa-user-doctor"></i>
+                                <h4 id="job"></h4>
+                            </span>
+                        </div>
+                        <div class="boite-infos">
+                            <h3>Organisation</h3>
+                            <span>
+                                <i class="fa-solid fa-cannabis"></i>
+                                <h4 id="job2"></h4>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="droite">
+                    <div class="content-boite-droite">
+                        <div class="boite-action-i">
+                            <i class="fa-solid fa-address-card"></i>
+                            <h4 id="drop-id-card">Montrer CI</h4>
+                        </div>
+                        <div class="boite-action-i">
+                            <i class="fa-solid fa-address-card"></i>
+                            <h4 id="drop-dmv-card">Montrer PV</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="billingPage">
+            <div id="playerBills">
+            </div>
+        </div>
+        <!-- ===== JS ===== -->
+        <script src="assets/js/script.js" type="text/javascript"></script>
+    </body>
+</html>
